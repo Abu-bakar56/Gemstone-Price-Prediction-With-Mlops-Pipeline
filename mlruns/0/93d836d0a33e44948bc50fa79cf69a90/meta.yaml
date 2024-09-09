@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/abuba/OneDrive/Desktop/Gemstone-Price-Prediction-With-Mlops-Pipeline/mlruns/0/93d836d0a33e44948bc50fa79cf69a90/artifacts
+end_time: 1725902758201
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 93d836d0a33e44948bc50fa79cf69a90
+run_name: amusing-finch-688
+run_uuid: 93d836d0a33e44948bc50fa79cf69a90
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1725902750742
+status: 3
+tags: []
+user_id: abuba

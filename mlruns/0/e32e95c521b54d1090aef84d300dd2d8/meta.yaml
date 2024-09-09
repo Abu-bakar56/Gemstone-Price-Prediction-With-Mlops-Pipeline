@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/abuba/OneDrive/Desktop/Gemstone-Price-Prediction-With-Mlops-Pipeline/mlruns/0/e32e95c521b54d1090aef84d300dd2d8/artifacts
+end_time: 1725903178733
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e32e95c521b54d1090aef84d300dd2d8
+run_name: popular-vole-642
+run_uuid: e32e95c521b54d1090aef84d300dd2d8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1725903172624
+status: 3
+tags: []
+user_id: abuba

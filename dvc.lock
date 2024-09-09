@@ -1,0 +1,61 @@
+schema: '2.0'
+stages:
+  training:
+    cmd: python src\pipline\training_pipline.py
+    deps:
+    - path: src\components\data_ingestion.py
+      hash: md5
+      md5: 4d6b4550ce4e1e969bf7966d211157e5
+      size: 1955
+    - path: src\components\data_tranformation.py
+      hash: md5
+      md5: 241a589575e0ee557b1208a0e140cc53
+      size: 4539
+    - path: src\components\model_evaluation.py
+      hash: md5
+      md5: f342f9b73af11ad937302e5a4e333419
+      size: 2239
+    - path: src\components\model_trainer.py
+      hash: md5
+      md5: 870143b2e61c3140f0ae93c285e0569a
+      size: 2447
+    - path: src\pipline\training_pipline.py
+      hash: md5
+      md5: 8571cd34c5eccfd5ef08283abce54c83
+      size: 814
+    outs:
+    - path: artifacts\model.pkl
+      hash: md5
+      md5: 893640dbdfdb520e436eff8f9ca44ebf
+      size: 547
+    - path: artifacts\preprocessor.pkl
+      hash: md5
+      md5: d642a363cd7917e1236e6ef50bbf8324
+      size: 3025
+    - path: artifacts\raw.csv
+      hash: md5
+      md5: 4d3b99278017349368e70a85aa43bd7d
+      size: 10656378
+    - path: artifacts\test.csv
+      hash: md5
+      md5: 54c6a3e4b43b560292d2cd324ee33ce2
+      size: 2664476
+    - path: artifacts\train.csv
+      hash: md5
+      md5: a0b6f48a0476c670772401a788c08359
+      size: 7991954
+  prediction:
+    cmd: python src\pipline\prediction_pipline.py
+    deps:
+    - path: artifacts\model.pkl
+      hash: md5
+      md5: 893640dbdfdb520e436eff8f9ca44ebf
+      size: 547
+    - path: artifacts\preprocessor.pkl
+      hash: md5
+      md5: d642a363cd7917e1236e6ef50bbf8324
+      size: 3025
+    - path: src\pipline\prediction_pipline.py
+      hash: md5
+      md5: 6a078a5772c3b8b0fbe5fb387c8d94cb
+      size: 2024

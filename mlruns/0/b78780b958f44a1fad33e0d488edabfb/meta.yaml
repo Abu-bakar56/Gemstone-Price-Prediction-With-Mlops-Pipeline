@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/abuba/OneDrive/Desktop/Gemstone-Price-Prediction-With-Mlops-Pipeline/mlruns/0/b78780b958f44a1fad33e0d488edabfb/artifacts
+end_time: 1725903044469
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b78780b958f44a1fad33e0d488edabfb
+run_name: painted-hound-636
+run_uuid: b78780b958f44a1fad33e0d488edabfb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1725903038130
+status: 3
+tags: []
+user_id: abuba

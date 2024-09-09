@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/abuba/OneDrive/Desktop/Gemstone-Price-Prediction-With-Mlops-Pipeline/mlruns/0/c2465bb9cc8f4461b3c89abfdd85fd0c/artifacts
+end_time: 1725902974148
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c2465bb9cc8f4461b3c89abfdd85fd0c
+run_name: chill-foal-385
+run_uuid: c2465bb9cc8f4461b3c89abfdd85fd0c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1725902966654
+status: 3
+tags: []
+user_id: abuba
