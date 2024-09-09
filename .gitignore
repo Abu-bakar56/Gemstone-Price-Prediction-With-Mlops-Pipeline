@@ -145,6 +145,12 @@ trains.csv
 
 train_org.csv
 
+artifacts/model.pkl
+artifacts/test.csv
+artifacts/train.csv
+artifacts/raw.csv
+artifacts/preprocessor.pkl
+artifacts/model.pkl
 
 
 # mypy
