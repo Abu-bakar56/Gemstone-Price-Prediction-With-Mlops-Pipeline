@@ -5,6 +5,7 @@ import pendulum
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from src.pipline.training_pipline import TrainingPipeline
+import os
 
 training_pipeline=TrainingPipeline()
 
@@ -41,13 +42,18 @@ with DAG(
         test_arr=np.array(data_transformation_artifact["test_arr"])
         training_pipeline.start_model_training(train_arr,test_arr)
     
-    ## you have to config azure blob
-    def push_data_to_azureblob(**kwargs):
-        import os
-        bucket_name="reposatiory_name"
-        artifact_folder="/app/artifacts"
-        #you can save it ti the azure blob
-        #os.system(f"aws s3 sync {artifact_folder} s3:/{bucket_name}/artifact")
+    def push_data_to_render(**kwargs):
+   
+    
+    # Define the folder containing your blog artifacts
+     artifact_folder = "/app/artifacts"
+    
+    # Navigate to your project folder (if necessary)
+     os.chdir(artifact_folder)
+
+    # Deploy to Render (replace <service_name> with your actual service name)
+     os.system("render deploy <web service>")
+
         
         
         
@@ -85,10 +91,9 @@ with DAG(
     )
     
    
-    push_data_to_s3_task = PythonOperator(
-        task_id="push_data_to_s3",
-        python_callable=push_data_to_s3
-        )
+    push_data_to_render_task = PythonOperator(
+        task_id="push_data_to_render",
+        python_callable=push_data_to_render
+    )
 
-
-data_ingestion_task >> data_transform_task >> model_trainer_task >> push_data_to_s3_task
+data_ingestion_task >> data_transform_task >> model_trainer_task >>  push_data_to_render_task
